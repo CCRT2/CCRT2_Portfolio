@@ -1,27 +1,14 @@
-# Cohen Marley — Kinetic Typography Portfolio
+# Cohen Marley — Continuous Particle-World Portfolio
 
-A cinematic, typography-led personal portfolio built with Next.js, TypeScript, Tailwind CSS, GSAP, and Framer Motion.
+A continuously evolving portfolio environment built with Next.js, TypeScript, React Three Fiber, Three.js, custom GLSL shaders, GSAP ScrollTrigger, and Tailwind CSS. Its GPU-rendered particle field stays in motion independently of scrolling; scroll progress shifts the particles through procedural orbital, wave, and network-like compositions.
 
-## Getting started
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the site.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Scripts
-
-- `npm run dev` — start the local development server
-- `npm run build` — create a production build
-- `npm run start` — serve the production build
-- `npm run typecheck` — run TypeScript checks
-
-## Personalize before launch
-
-- Update the contact email in `app/page.tsx`.
-- Replace the three exploration cards with real projects and links when ready.
-- Adjust the title, metadata, or social links in `app/layout.tsx` and `app/page.tsx`.
-
-The project cards are framed as explorations rather than claims about completed client work.
+The WebGL canvas is decorative and hidden from assistive technology. Portfolio text and links remain accessible HTML. The simulation adapts to reduced-motion preferences by lowering movement speed while keeping the field alive.
