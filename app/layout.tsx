@@ -1,3 +1,5 @@
+'use client';
+
 import type { Metadata } from 'next';
 import { IBM_Plex_Mono, Space_Grotesk } from 'next/font/google';
 import './globals.css';
@@ -6,15 +8,16 @@ const display = Space_Grotesk({ subsets: ['latin'], variable: '--font-display' }
 const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-mono' });
 
 export const metadata: Metadata = {
-  title: 'Cohen Marley — Building What’s Next',
-  description: 'Cohen Marley — cybersecurity, networking, engineering, and technology.',
-  themeColor: '#0a0a0b',
+  title: 'Cohen Marley — The Living Particle Portfolio',
+  description: 'A portfolio exploring cybersecurity, networking, engineering, and technology through a continuously evolving particle world.',
+  themeColor: '#000000',
+  openGraph: {
+    title: 'Cohen Marley — The Living Particle Portfolio',
+    description: 'Cybersecurity / Networking / Engineering / Technology',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <body className={`${display.variable} ${mono.variable}`}>{children}</body>
-    </html>
-  );
+  return <html lang="en"><body className={`${display.variable} ${mono.variable}`}>{children}</body></html>;
 }
